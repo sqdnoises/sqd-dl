@@ -1,41 +1,39 @@
-# Avatar Generator
-Generate gradient avatars on demand.
-<br>
-This is a port of Aelpxy's avatar generator. [View repository](https://github.com/Aelpxy/avatar-generator)
+# PyVid Simple
+![MIT license](https://img.shields.io/badge/license-MIT-brightgreen)
+![Python language](https://img.shields.io/badge/language-Python-yellow)
+![Trivago hotel](https://img.shields.io/badge/hotel-Trivago-orange)
+
+Download youtube videos easily using this program!
 
 ## Getting Started
 Clone this repository or download the zip and extract it to a folder you like.
+<br>
+(ℹ) This program downloads to the folder you start the program in.
 
 ### Requirements
 You need [Python 3.6+](https://www.python.org/downloads/) for this to work.
+<br>
+This program uses the [`yt-dlp`](https://pypi.org/project/yt-dlp/) package.
 
 ### Install pip Requirements
 Open a terminal in the folder this readme is in.
 
 #### On Windows:
-Make sure python is on path.
+Make sure python is on path and pip was installed in python installation.
 <br>
 Run:
 ```
 python -m pip install -r requirements.txt
 ```
-OR
-```
-python -m pip install colorhash
-```
 
 #### On MacOS/Linux:
 Make sure python3 is on path.
 <br>
-(If this command gives an error saying no module pip or something, make sure any python pip related packages are installed.)
+(If this command gives an error saying no module named pip or something, make sure any python pip related packages are installed.)
 <br>
 Run:
 ```
 python3 -m pip install -r requirements.txt
-```
-OR
-```
-python3 -m pip install colorhash
 ```
 
 ## To run
@@ -46,7 +44,7 @@ Make sure python is on path.
 <br>
 Run:
 ```
-py app.py
+py pyvid.py
 ```
 
 ### On MacOS/Linux:
@@ -54,50 +52,57 @@ Make sure python3 is on path.
 <br>
 Run:
 ```
-python3 app.py
+python3 pyvid.py
 ```
 
 ## To use
-Goto http://localhost:5050/ for a random image.
+It's easy to use this.
 <br>
-Goto http://localhost:5050/<some text\> where `<some text>` is the seed.
-<br>
-<br>
-### For custom sizes,
-You can use the parameter `size` to change its size in pixels.
-<br>
-Examples:
- - For random image: http://localhost:5050/?size=100
-   <br>
-   This changes the size of the image to 100 pixels.
- - With a seed: http://localhost:5050/<seed\>?size=340
-   <br>
-   Where `<seed>` is the seed.
-   <br>
-   This changes the size of the image to 100 pixels.
+After running it, you can either:
+- download youtube video from link
+- download first video from search
+- exit the program
 
-### For a square image,
-You can use the parameter `square`  to change the shape of the svg to square.
+### download youtube video from link
+To download a youtube video from link, just type or paste the link and press enter.
 <br>
-Accepts values:
- - `true`, `t`, `yes`, `y` and `1` (any case) if you want to see square image.
- - `false`, `f`, `no`, `n` and `0` (any case) if you want to see the circular image
+The download should start automatically if the video exists.
 
-Examples:
- - For random image: http://localhost:5050/?square=1
- - With a seed: http://localhost:5050/<seed\>?square=yes
-   <br>
-   Where `<seed>` is the seed.
-
-### Change size and make it a square
-If you want to change the size of the image and also make it a square image, you can do so too by putting a `&` between the parameters.
+### download first video from search
+To download first video from search, type `+` before what you want to search.
 <br>
-Examples:
- - For random image: http://localhost:5050/?size=305&square=true
-   <br>
-   This changes the size of the image to 305 pixels and also makes it a square.
- - With a seed: http://localhost:5050/<seed\>?square=y&size=1058
-   <br>
-   Where `<seed>` is the seed.
-   <br>
-   This changes the size of the image to 1058 pixels and also makes it a square.
+The downoad should start automatically after a video is found.
+
+### exit the program
+Type `exit` to exit or press `Ctrl` + `C` on your keyboard to exit.
+
+### Examples
+```py
+$ python3 pyvid.py
+type `exit` or press ctrl + c to exit
+[0] enter youtube link to download or download first search result by +<what to search>
+> https://www.youtube.com/watch?v=dQw4w9WgXcQ
+your input: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`
+... download progress ...
+[0] download for `https://www.youtube.com/watch?v=dQw4w9WgXcQ` complete
+
+[1] enter youtube link to download or download first search result by +<what to search>
+> +funeral - back2sleep (lyrics)
+your input: `+funeral - back2sleep (lyrics)`
+... download progress ...
+[1] download for `funeral - back2sleep (lyrics)` complete
+
+[2] enter youtube link to download or download first search result by +<what to search>
+> + wenomechainsama full video
+your input: `+ wenomechainsama full video`
+... download progress ...
+[2] download for `wenomechainsama full video` complete
+
+[3] enter youtube link to download or download first search result by +<what to search>
+> exit
+your input: `exit`
+
+exited loop
+
+$
+```
