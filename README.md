@@ -3,7 +3,7 @@
 ![Python language](https://img.shields.io/badge/language-Python-yellow)
 ![Trivago hotel](https://img.shields.io/badge/hotel-Trivago-orange)
 
-Download youtube videos easily using this program!
+Simple command line app/tool to download youtube videos easily!
 
 ## Getting Started
 Clone this repository or download the zip and extract it to a folder you like.
