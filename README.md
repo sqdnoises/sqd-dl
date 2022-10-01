@@ -71,7 +71,7 @@ The download should start automatically if the video exists.
 ### download first video from search
 To download first video from search, type `+` before what you want to search.
 <br>
-The downoad should start automatically after a video is found.
+The download should start automatically after a video is found.
 
 ### exit the program
 Type `exit` to exit or press `Ctrl` + `C` on your keyboard to exit.
